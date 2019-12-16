@@ -112,14 +112,15 @@ unset url
 unset big_list
 else
 grep -o 'username": "[^ ]*.' $user_account.following.* | cut -d " " -f2 | tr -d '"' | tr -d ',' | sort > $user_account.following_temp
-cat $user_account.following_temp | uniq > $user_account.following_list
+mkdir core
+cat $user_account.following_temp | uniq > core/$user_account.following_list.txt
 rm -rf $user_account.following_temp
 
-tot_following=$(wc -l $user_account.following_list | cut -d " " -f1)
+tot_following=$(wc -l core/$user_account.following_list.txt | cut -d " " -f1)
 printf "\n"
 printf " \e[1;96m[\e[0m\e[1;97m+\e[0m\e[1;96m]\e[0m\e[1;96m You are Following\e[0m\e[92m %s\e[0m\e[1;96m users.\e[0m\n" $tot_following
 printf "\n"
-printf " \e[1;96m[\e[0m\e[1;97m+\e[0m\e[1;96m]\e[0m\e[1;96m Following List Saved at :\e[0m\e[1;92m %s.following_list\e[0m\n" $user_account
+printf " \e[1;96m[\e[0m\e[1;97m+\e[0m\e[1;96m]\e[0m\e[1;96m Following List Saved at :\e[0m\e[1;92m core/%s.following_list.txt\e[0m\n" $user_account
 printf "\n"
 
 if [[ ! -d .$user_account/raw_following/ ]]; then
@@ -153,7 +154,7 @@ sleep 4
 while [[ true ]]; do
 
 
-for unfollow_name in $(cat $user_account.following_list); do
+for unfollow_name in $(cat core/$user_account.following_list.txt); do
 
 username_id=$(curl -L -s 'https://www.instagram.com/'$user'' > .getmyid && grep -o  'profilePage_[0-9]*.' .getmyid | cut -d "_" -f2 | tr -d '"')
 
