@@ -1,7 +1,7 @@
 # Unfollow Plus
 ### [+] Created By HTR-TECH (@***tahmid.rayat***)
 ### [+] Disclaimer :
-***Unfollow Plus is an automated tool to Unfoolow Users of Instagram.This Tool is created for Educational Purpose only.I am not responsible for any misuse of this tool.***
+***Unfollow Plus is an automated tool to Unfollow Users of Instagram.This Tool is created for Educational Purpose only.I am not responsible for any misuse of this tool.***
 
 <img src="https://i.ibb.co/mBccqnf/unfollowplus.jpg" alt="1" border="0">
 
