@@ -11,11 +11,11 @@
 * ```apt install git curl -y```
 * ```git clone https://github.com/htr-tech/unfollow-plus```
 * ```cd unfollow-plus```
-* ```bash unfollower```
+* ```bash unfollower.sh```
 
 ### Or ; Use Single Command
 ```
-apt update && apt install git curl -y && git clone https://github.com/htr-tech/unfollow-plus && cd unfollow-plus && bash unfollower
+apt update && apt install git curl -y && git clone https://github.com/htr-tech/unfollow-plus && cd unfollow-plus && bash unfollower.sh
 ```
 
 ## [+] Features :
